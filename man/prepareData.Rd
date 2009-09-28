@@ -5,12 +5,15 @@
 and generates the corresponding matrix of dummy variables, and some further quantities that are used
 by the active set algorithm in \code{\link{ordFacReg}} and \code{\link{ordFacRegCox}}.
 }
-\usage{prepareData(Z, fact = NA, ordfact, intercept = TRUE)}
+\usage{prepareData(Z, fact = NA, ordfact, ordering = NA, intercept = TRUE)}
 \arguments{
   \item{Z}{Matrix with quantitative variables in the first \eqn{c} columns, unordered factors in the next columns, 
   and finally unordered factors. The latter two need to have levels from \eqn{1} to \eqn{j}.}
   \item{fact}{Specify columns in \eqn{Z} that correspond to unordered factors.}
   \item{ordfact}{Specify columns in \eqn{Z} that correspond to ordered factors.}
+  \item{ordering}{Vector of the same length as \code{ordfact}. Specifies ordering of ordered factors: \code{"i"} means
+  that the coefficients of the corresponding ordered factor are estimated in non-decreasing order and \code{"d"} means
+  non-increasing order. See the examples in \code{ordFacReg} for details.}  
   \item{intercept}{If \code{TRUE}, an intercept (= column of all 1's) is added to the design matrix.}
 }
 \value{Quantities that are used by the active set algorithm. The names of the objects roughly correspond to
@@ -21,6 +24,6 @@ and \code{\link{ordFacRegCox}}.}
 \references{
 Rufibach, K. (2009)
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Preprint, available at \url{http://arxiv.org/abs/0902.0240}.
+Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
 }
 

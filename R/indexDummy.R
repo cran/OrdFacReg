@@ -1,4 +1,4 @@
-`indexDummy` <-
+indexDummy <-
 function (kj, f, p) 
 {
     c <- p - f

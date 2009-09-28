@@ -1,4 +1,4 @@
-`maxStep` <-
+maxStep <-
 function (beta, beta_new, V, eps = 0) 
 {
     prod <- t(V) %*% beta

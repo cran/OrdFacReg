@@ -1,4 +1,4 @@
-`lmLSE` <-
+lmLSE <-
 function (D, Y) 
 {
     beta <- (ginv(t(Y) %*% Y)) %*% t(Y) %*% D

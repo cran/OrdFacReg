@@ -1,4 +1,4 @@
-`expandBeta` <-
+expandBeta <-
 function (beta.col, sums, JJs.A) 
 {
     eps <- 0

@@ -1,6 +1,9 @@
-`prepareData` <-
-function (Z, fact = NA, ordfact, intercept = TRUE) 
+prepareData <-
+function (Z, fact = NA, ordfact, ordering = NA, intercept = TRUE) 
 {
+    if (identical(NA, ordering) == TRUE) {
+        ordering <- rep("i", length(ordfact))
+    }
     Z <- as.matrix(Z)
     if (intercept == TRUE) {
         Z <- cbind(intercept = 1, Z)
@@ -34,6 +37,11 @@ function (Z, fact = NA, ordfact, intercept = TRUE)
     Y <- cbind(Z[, -ordfact])
     for (l in 1:f) {
         Y <- cbind(Y, dummy(Z[, ordfact[l]], dimnames(Z)[[2]][ordfact[l]]))
+    }
+    for (u in 1:length(JJs)) {
+        if (ordering[u] == "d") {
+            Y[, JJs[[u]]] <- Y[, rev(JJs[[u]])]
+        }
     }
     m <- dim(Y)[2]
     return(list(Z = Z, Y = Y, ordfact = ordfact, n = n, p = p, 

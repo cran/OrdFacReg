@@ -1,4 +1,4 @@
-`LSEsubspace` <-
+LSEsubspace <-
 function (D, Y, A, JJs, q) 
 {
     lse <- lmLSE(D, Y)$beta

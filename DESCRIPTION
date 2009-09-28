@@ -2,8 +2,8 @@ Package: OrdFacReg
 Type: Package
 Title: Least squares, logistic, and Cox-regression with ordered
         predictors
-Version: 1.0.0
-Date: 2009-04-16
+Version: 1.0.1
+Date: 2009-09-28
 Author: Kaspar Rufibach
 Maintainer: Kaspar Rufibach <kaspar.rufibach@ifspm.uzh.ch>
 Depends: eha, MASS
@@ -20,6 +20,6 @@ Description: In biomedical studies, researchers are often interested in
 License: GPL (>= 2)
 LazyLoad: yes
 URL: http://www.biostat.uzh.ch/aboutus/people/rufibach.html
-Packaged: Thu Apr 16 10:46:06 2009; rufibach
+Packaged: 2009-09-28 12:14:06 UTC; rufibach
 Repository: CRAN
-Date/Publication: 2009-04-16 09:17:17
+Date/Publication: 2009-09-28 13:36:28

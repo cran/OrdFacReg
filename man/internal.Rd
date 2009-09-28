@@ -77,7 +77,7 @@ Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs
 
 Rufibach, K. (2009)
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Preprint, available at \url{http://arxiv.org/abs/0902.0240}.
+Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{All these functions are used by the ordered factor computation functions \code{\link{ordFacReg}} 

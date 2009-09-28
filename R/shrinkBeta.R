@@ -1,4 +1,4 @@
-`shrinkBeta` <-
+shrinkBeta <-
 function (Y, A, JJs, q) 
 {
     mini <- min(unlist(JJs))

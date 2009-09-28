@@ -1,4 +1,4 @@
-`phi_jl` <-
+phi_jl <-
 function (p, f, kj) 
 {
     c <- p - f

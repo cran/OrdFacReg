@@ -1,4 +1,4 @@
-`constraintMats` <-
+constraintMats <-
 function (m, c, f, JJs, kj) 
 {
     V <- matrix(nrow = m)

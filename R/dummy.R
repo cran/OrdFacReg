@@ -1,4 +1,4 @@
-`dummy` <-
+dummy <-
 function (f, name = "f") 
 {
     n <- length(f)

@@ -1,4 +1,4 @@
-`coxSubspace` <-
+coxSubspace <-
 function (ttf, tf, Y, A, JJs, q) 
 {
     mle <- matrix(coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), 

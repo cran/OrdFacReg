@@ -1,4 +1,4 @@
-`logRegDeriv` <-
+logRegDeriv <-
 function (beta, Y, Z) 
 {
     n <- dim(Z)[1]

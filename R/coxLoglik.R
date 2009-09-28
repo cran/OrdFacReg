@@ -1,4 +1,4 @@
-`coxLoglik` <-
+coxLoglik <-
 function (beta, ttf, tf, Z) 
 {
     pro <- Z %*% beta

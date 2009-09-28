@@ -1,8 +1,11 @@
-`ordFacRegCox` <-
-function (ttf, tf, Z, fact, ordfact, intercept = TRUE, display = 0, 
-    eps = 0) 
+ordFacRegCox <-
+function (ttf, tf, Z, fact, ordfact, ordering = NA, intercept = TRUE, 
+    display = 0, eps = 0) 
 {
-    prep <- prepareData(Z, fact, ordfact, intercept)
+    if (identical(NA, ordering) == TRUE) {
+        ordering <- rep("i", length(ordfact))
+    }
+    prep <- prepareData(Z, fact, ordfact, ordering, intercept)
     Y <- prep$Y
     n <- prep$n
     p <- prep$p
@@ -48,6 +51,11 @@ function (ttf, tf, Z, fact, ordfact, intercept = TRUE, display = 0,
             if (length(A) == 0) {
                 break
             }
+        }
+    }
+    for (u in 1:length(JJs)) {
+        if (ordering[u] == "d") {
+            beta[JJs[[u]]] <- beta[rev(JJs[[u]])]
         }
     }
     dimnames(beta) <- list(dimnames(Y)[[2]], NULL)

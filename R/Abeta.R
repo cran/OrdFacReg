@@ -1,4 +1,4 @@
-`Abeta` <-
+Abeta <-
 function (V, beta) 
 {
     q <- dim(V)[2]

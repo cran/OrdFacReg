@@ -6,7 +6,7 @@ This function computes estimates in Cox-regression where coefficients correspond
 dummy variables of ordered factors are estimated to be in non-decreasing order and at least 0.
 An active set algorithm as described in Duembgen et al. (2007) is used.
 }
-\usage{ordFacRegCox(ttf, tf, Z, fact, ordfact, intercept = TRUE, 
+\usage{ordFacRegCox(ttf, tf, Z, fact, ordfact, ordering = NA, intercept = TRUE, 
     display = 0, eps = 0)}
 \arguments{
   \item{ttf}{Survival times.}
@@ -14,6 +14,9 @@ An active set algorithm as described in Duembgen et al. (2007) is used.
   \item{Z}{Matrix of predictors. Factors are coded with levels from 1 to \eqn{j}.}
   \item{fact}{Specify columns in \eqn{Z} that correspond to unordered factors.}
   \item{ordfact}{Specify columns in \eqn{Z} that correspond to ordered factors.}
+  \item{ordering}{Vector of the same length as \code{ordfact}. Specifies ordering of ordered factors: \code{"i"} means
+  that the coefficients of the corresponding ordered factor are estimated in non-decreasing order and \code{"d"} means
+  non-increasing order. See the examples in \code{ordFacReg} for details.}  
   \item{intercept}{If \code{TRUE}, an intercept (= column of all 1's) is added to the design matrix.}
   \item{display}{If \code{display == 1} progress of the algorithm is output.}
   \item{eps}{Quantity to which the criterion in the Basic Procedure 2 in Duembgen et al. (2007) is compared.}
@@ -32,7 +35,7 @@ Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs
 
 Rufibach, K. (2009)
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Preprint, available at \url{http://arxiv.org/abs/0902.0240}.
+Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{\code{\link{ordFacReg}} computes estimates for least squares and logistic regression.}
@@ -81,15 +84,15 @@ tf <- round(runif(n))
 ## --------------------------------------------------------
 ## generate design matrix
 ## --------------------------------------------------------
-Y <- prepareData(Z, fact, ordfact, intercept)$Y
+Y <- prepareData(Z, fact, ordfact, ordering = NA, intercept)$Y
 
 ## --------------------------------------------------------
 ## compute estimates
 ## --------------------------------------------------------
 res1 <- coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), 
     strats = rep(1, length(tf)))$coefficients
-res2 <- ordFacRegCox(ttf, tf, Z, fact, ordfact, intercept = intercept, 
-    display = 1, eps = 0)
+res2 <- ordFacRegCox(ttf, tf, Z, fact, ordfact, ordering = NA, 
+    intercept = intercept, display = 1, eps = 0)
 b1 <- matrix(res1, ncol = 1)
 g1 <- coxDeriv(b1, ttf, tf, Y)$dL
 b2 <- res2$beta

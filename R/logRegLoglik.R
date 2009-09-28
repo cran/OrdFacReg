@@ -1,4 +1,4 @@
-`logRegLoglik` <-
+logRegLoglik <-
 function (beta, Y, Z) 
 {
     n <- length(Y)

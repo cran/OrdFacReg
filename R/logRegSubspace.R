@@ -1,4 +1,4 @@
-`logRegSubspace` <-
+logRegSubspace <-
 function (D, Y, A, JJs, q) 
 {
     mle <- matrix(glm.fit(Y, D, family = binomial(link = logit))$coefficients, 

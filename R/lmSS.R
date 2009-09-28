@@ -1,4 +1,4 @@
-`lmSS` <-
+lmSS <-
 function (beta, D, Y) 
 {
     L <- -sum((D - Y %*% beta)^2)

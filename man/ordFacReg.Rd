@@ -6,13 +6,16 @@ This function computes estimates in least squares or logistic regression where c
 dummy variables of ordered factors are estimated to be in non-decreasing order and at least 0.
 An active set algorithm as described in Duembgen et al. (2007) is used.
 }
-\usage{ordFacReg(D, Z, fact, ordfact, type = c("LS", "logreg"), 
+\usage{ordFacReg(D, Z, fact, ordfact, ordering = NA, type = c("LS", "logreg"), 
     intercept = TRUE, display = 0, eps = 0)}
 \arguments{
   \item{D}{Response vector, either in \eqn{R^n} (least squares) or in \eqn{\{0, 1\}^n} (logistic).}
   \item{Z}{Matrix of predictors. Factors are coded with levels from 1 to \eqn{j}.}
   \item{fact}{Specify columns in \eqn{Z} that correspond to unordered factors.}
   \item{ordfact}{Specify columns in \eqn{Z} that correspond to ordered factors.}
+  \item{ordering}{Vector of the same length as \code{ordfact}. Specifies ordering of ordered factors: \code{"i"} means
+  that the coefficients of the corresponding ordered factor are estimated in non-decreasing order and \code{"d"} means
+  non-increasing order. See the examples below for details.}
   \item{type}{Specify type of response variable.}
   \item{intercept}{If \code{TRUE}, an intercept (= column of all 1's) is added to the design matrix.}
   \item{display}{If \code{display == 1} progress of the algorithm is output.}
@@ -32,7 +35,7 @@ Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs
 
 Rufibach, K. (2009)
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Preprint, available at \url{http://arxiv.org/abs/0902.0240}.
+Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{\code{\link{ordFacRegCox}} computes estimates for Cox-regression.}
@@ -76,7 +79,7 @@ ordfact <- n.q + length(un.levels) + 1:length(levels)
 ## --------------------------------------------------------
 ## generate data matrices
 ## --------------------------------------------------------
-Y <- prepareData(Z, fact, ordfact, intercept)$Y
+Y <- prepareData(Z, fact, ordfact, ordering = NA, intercept)$Y
 
 ## --------------------------------------------------------
 ## generate response
@@ -89,7 +92,7 @@ D <- apply(Y * matrix(c(rep(c(2, -3, 0), each = n), rep(c(1, 1), each = n),
 ## compute estimates
 ## --------------------------------------------------------
 res1 <- lmLSE(D, Y)
-res2 <- ordFacReg(D, Z, fact, ordfact, type = "LS", intercept, 
+res2 <- ordFacReg(D, Z, fact, ordfact, ordering = "i", type = "LS", intercept, 
     display = 1, eps = 0)
 b1 <- res1$beta
 g1 <- lmSS(b1, D, Y)$dL
@@ -113,7 +116,7 @@ Ls
 ## --------------------------------------------------------
 ## initialization
 ## --------------------------------------------------------
-set.seed(23041977)
+set.seed(1977)
 n <- 500
 Z <- NULL
 intercept <- FALSE
@@ -148,14 +151,14 @@ D <- sample(c(rep(0, n / 2), rep(1, n/2)))
 ## --------------------------------------------------------
 ## generate design matrix
 ## --------------------------------------------------------
-Y <- prepareData(Z, fact, ordfact, intercept)$Y
+Y <- prepareData(Z, fact, ordfact, ordering = NA, intercept)$Y
 
 ## --------------------------------------------------------
 ## compute estimates
 ## --------------------------------------------------------
 res1 <- matrix(glm.fit(Y, D, family = binomial(link = logit))$coefficients, ncol = 1)
-res2 <- ordFacReg(D, Z, fact, ordfact, type = "logreg", intercept = intercept, 
-    display = 1, eps = 0)
+res2 <- ordFacReg(D, Z, fact, ordfact, ordering = NA, type = "logreg", 
+    intercept = intercept, display = 1, eps = 0)
 b1 <- res1
 g1 <- logRegDeriv(b1, D, Y)$dL
 b2 <- res2$beta
@@ -164,6 +167,24 @@ Ls <- unlist(c(logRegLoglik(res1, D, Y), res2$L))
 names(Ls) <- c("MLE", "ordFact") 
 disp <- cbind(1:length(b1), round(cbind(b1, g1, cumsum(g1)), 4), 
     round(cbind(b2, g2, cumsum(g2)), 4))
+
+## --------------------------------------------------------
+## display results
+## --------------------------------------------------------
+disp
+Ls
+
+## --------------------------------------------------------
+## compute estimates when the third ordered factor should
+## have *decreasing* estimated coefficients
+## --------------------------------------------------------
+res3 <- ordFacReg(D, Z, fact, ordfact, ordering = c("i", "i", "d"), 
+    type = "logreg", intercept = intercept, display = 1, eps = 0)
+b3 <- res3$beta
+g3 <- logRegDeriv(b3, D, Y)$dL
+Ls <- unlist(c(logRegLoglik(res1, D, Y), res2$L, res3$L))
+names(Ls) <- c("MLE", "ordFact ddd", "ordFact iid") 
+disp <- cbind(1:length(b1), round(cbind(b1, b2, b3), 4))
 
 ## --------------------------------------------------------
 ## display results

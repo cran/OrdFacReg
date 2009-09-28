@@ -1,4 +1,4 @@
-`coxDeriv` <-
+coxDeriv <-
 function (beta, ttf, tf, Z) 
 {
     p <- dim(Z)[2]
