@@ -17,13 +17,13 @@ by the active set algorithm in \code{\link{ordFacReg}} and \code{\link{ordFacReg
   \item{intercept}{If \code{TRUE}, an intercept (= column of all 1's) is added to the design matrix.}
 }
 \value{Quantities that are used by the active set algorithm. The names of the objects roughly correspond to
-those in Rufibach (2009).}
+those in Rufibach (2010).}
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{This function is used by the ordered factor computation functions \code{\link{ordFacReg}} 
 and \code{\link{ordFacRegCox}}.}
 \references{
-Rufibach, K. (2009)
+Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
+\emph{Comput. Statist. Data Anal.}, \bold{54}, 1442-1456.
 }
 

@@ -16,8 +16,8 @@ that efficiently computes such estimators.}
 \tabular{ll}{
 Package:  \tab OrdFacReg  \cr
 Type:     \tab Package    \cr
-Version:  \tab 1.0.1      \cr
-Date:     \tab 2009-09-28 \cr
+Version:  \tab 1.0.2      \cr
+Date:     \tab 2010-08-30 \cr
 License:  \tab GPL (>=2)  \cr
 LazyLoad: \tab yes        \cr
 }
@@ -27,9 +27,9 @@ The package offers an active set algorithm implemented in the functions \code{\l
 and logistic regression and \code{\link{ordFacRegCox}} for Cox-regression. 
 }
 \references{
-Rufibach, K. (2009)
+Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
+\emph{Comput. Statist. Data Anal.}, \bold{54}, 1442-1456.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{Examples are given in the help files of the functions \code{\link{ordFacReg}} and \code{\link{ordFacRegCox}}.}

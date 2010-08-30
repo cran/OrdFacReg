@@ -23,7 +23,7 @@
 \details{These functions are not intended to be called by users directly. 
 \itemize{
 
-\item{\code{\link{Abeta}}}{Function \eqn{A(\bold{\beta})} in Rufibach (2009) that collects the indices of
+\item{\code{\link{Abeta}}}{Function \eqn{A(\bold{\beta})} in Rufibach (2010) that collects the indices of
 the inequalities violated by \eqn{\bold{\beta}}.}
 
 \item{\code{\link{constraintMats}}}{Function that computes the matrices \eqn{\bold{B}} (collects the basis vectors
@@ -62,7 +62,7 @@ Table 1 of Duembgen et al. (2007).}
 \item{\code{\link{maxStep}}}{Compute maximal permissible steplength, denoted by \eqn{t} in Table 1 in 
 Duembgen et al. (2007).}
 
-\item{\code{\link{phi_jl}}}{Function \eqn{\phi} in Rufibach (2009) that maps the original indices \eqn{(i, j)} to
+\item{\code{\link{phi_jl}}}{Function \eqn{\phi} in Rufibach (2010) that maps the original indices \eqn{(i, j)} to
 the inequality index \eqn{i}.}
 
 \item{\code{\link{setminus}}}{Remove elements in vector \eqn{B} from vector \eqn{A}.}
@@ -71,13 +71,13 @@ the inequality index \eqn{i}.}
 }
 }
 \references{
-Duembgen, L., Huesler, A. and Rufibach, K. (2007)
+Duembgen, L., Huesler, A. and Rufibach, K. (2010).
 Active set and EM algorithms for log-concave densities based on complete and censored data.
 Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs/0707.4643}.
 
-Rufibach, K. (2009)
+Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
+\emph{Comput. Statist. Data Anal.}, \bold{54}, 1442-1456.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{All these functions are used by the ordered factor computation functions \code{\link{ordFacReg}} 

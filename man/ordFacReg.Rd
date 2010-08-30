@@ -21,7 +21,7 @@ An active set algorithm as described in Duembgen et al. (2007) is used.
   \item{display}{If \code{display == 1} progress of the algorithm is output.}
   \item{eps}{Quantity to which the criterion in the Basic Procedure 2 in Duembgen et al. (2007) is compared.}
 }
-\details{For a detailed description of the problem and the algorithm we refer to Rufibach (2009).}
+\details{For a detailed description of the problem and the algorithm we refer to Rufibach (2010).}
 \value{
   \item{L}{Value of the criterion function at the maximum.}
   \item{beta}{Computed regression coefficients.}
@@ -29,13 +29,13 @@ An active set algorithm as described in Duembgen et al. (2007) is used.
   \item{design.matrix}{Design matrix that was generated.}
 }
 \references{
-Duembgen, L., Huesler, A. and Rufibach, K. (2007)
+Duembgen, L., Huesler, A. and Rufibach, K. (2010).
 Active set and EM algorithms for log-concave densities based on complete and censored data.
 Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs/0707.4643}.
 
-Rufibach, K. (2009)
+Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
-Under revision for Computational Statistics and Data Analysis, available at \url{http://arxiv.org/abs/0902.0240}.
+\emph{Comput. Statist. Data Anal.}, \bold{54}, 1442-1456.
 }
 \author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
 \seealso{\code{\link{ordFacRegCox}} computes estimates for Cox-regression.}
@@ -43,7 +43,7 @@ Under revision for Computational Statistics and Data Analysis, available at \url
 
 ## ========================================================
 ## To illustrate least squares estimation, we generate the same data
-## that was used in Rufibach (2009), Table 1.
+## that was used in Rufibach (2010), Table 1.
 ## ========================================================
 
 ## --------------------------------------------------------
