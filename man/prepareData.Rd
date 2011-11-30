@@ -18,7 +18,7 @@ by the active set algorithm in \code{\link{ordFacReg}} and \code{\link{ordFacReg
 }
 \value{Quantities that are used by the active set algorithm. The names of the objects roughly correspond to
 those in Rufibach (2010).}
-\author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
+\author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@gmail.com} \cr \url{http://www.kasparrufibach.ch}}
 \seealso{This function is used by the ordered factor computation functions \code{\link{ordFacReg}} 
 and \code{\link{ordFacRegCox}}.}
 \references{

@@ -1,3 +1,8 @@
+OrdFacReg_1.0.3 (2011/11/30)
+---------------------------------
+- Added a NAMESPACE file
+- Updated KRs contact details
+
 OrdFacReg_1.0.2 (2010/08/30)
 ---------------------------------
 - added option to chose ordering of each ordered factor

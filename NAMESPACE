@@ -1,0 +1,24 @@
+## which functions shall be accessible by the users?
+export(Abeta,
+constraintMats,
+coxDeriv,
+coxLoglik,
+coxSubspace,
+dummy,
+expandBeta,
+indexDummy,
+lmLSE,
+lmSS,
+logRegDeriv,
+logRegLoglik,
+logRegSubspace,
+LSEsubspace,
+maxStep,
+ordFacReg,
+ordFacRegCox,
+phi_jl,
+prepareData,
+setminus,
+shrinkBeta
+       )
+

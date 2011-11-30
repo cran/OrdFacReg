@@ -37,7 +37,7 @@ Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.
 \emph{Comput. Statist. Data Anal.}, \bold{54}, 1442-1456.
 }
-\author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@ifspm.uzh.ch} \cr \url{http://www.biostat.uzh.ch/aboutus/people/rufibach.html}}
+\author{Kaspar Rufibach (maintainer) \cr \email{kaspar.rufibach@gmail.com} \cr \url{http://www.kasparrufibach.ch}}
 \seealso{\code{\link{ordFacReg}} computes estimates for least squares and logistic regression.}
 \examples{
 
