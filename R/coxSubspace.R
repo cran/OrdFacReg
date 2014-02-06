@@ -1,6 +1,6 @@
 coxSubspace <- function(ttf, tf, Y, A, JJs, q){
 
-mle <- matrix(coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), strats = rep(1, length(tf)))$coefficients, ncol = 1)
+mle <- matrix(eha::coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), strats = rep(1, length(tf)))$coefficients, ncol = 1)
 
 ## in case of no violations of constraints just compute
 ## unconstrained estimates
@@ -26,7 +26,7 @@ if ((length(A) > 0) && (all.act == 0)){
     JJs.A <- res$JJs.A
 
     ## compute unconstrained estimator on subspace
-    beta.col <- matrix(coxreg.fit(Y.col, Surv(ttf, tf), max.survs = length(tf), strats = rep(1, length(tf)))$coefficients, ncol = 1)
+    beta.col <- matrix(eha::coxreg.fit(Y.col, Surv(ttf, tf), max.survs = length(tf), strats = rep(1, length(tf)))$coefficients, ncol = 1)
 
     ## expand estimate to receive estimate in original dimension back
     beta <- expandBeta(beta.col, sums, JJs.A)$beta

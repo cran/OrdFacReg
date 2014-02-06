@@ -16,8 +16,8 @@ that efficiently computes such estimators.}
 \tabular{ll}{
 Package:  \tab OrdFacReg  \cr
 Type:     \tab Package    \cr
-Version:  \tab 1.0.3      \cr
-Date:     \tab 2011-11-30 \cr
+Version:  \tab 1.0.4      \cr
+Date:     \tab 2014-02-06 \cr
 License:  \tab GPL (>=2)  \cr
 LazyLoad: \tab yes        \cr
 }

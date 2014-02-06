@@ -22,3 +22,7 @@ setminus,
 shrinkBeta
        )
 
+importFrom(MASS,
+           ginv)
+importFrom(eha,
+           coxreg.fit)           

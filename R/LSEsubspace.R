@@ -27,7 +27,7 @@ JJs.A <- res$JJs.A
 
 ## compute unconstrained estimator on subspace
 mat <- t(Y.col) %*% Y.col
-beta.col <- ginv(mat) %*% t(Y.col) %*% D
+beta.col <- MASS::ginv(mat) %*% t(Y.col) %*% D
 
 
 ## expand estimate to receive estimate in original dimension back

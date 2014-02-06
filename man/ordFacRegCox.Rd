@@ -89,7 +89,7 @@ Y <- prepareData(Z, fact, ordfact, ordering = NA, intercept)$Y
 ## --------------------------------------------------------
 ## compute estimates
 ## --------------------------------------------------------
-res1 <- coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), 
+res1 <- eha::coxreg.fit(Y, Surv(ttf, tf), max.survs = length(tf), 
     strats = rep(1, length(tf)))$coefficients
 res2 <- ordFacRegCox(ttf, tf, Z, fact, ordfact, ordering = NA, 
     intercept = intercept, display = 1, eps = 0)
