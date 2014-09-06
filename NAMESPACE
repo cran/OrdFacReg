@@ -25,4 +25,6 @@ shrinkBeta
 importFrom(MASS,
            ginv)
 importFrom(eha,
-           coxreg.fit)           
+           coxreg.fit) 
+importFrom(survival,
+           Surv)  

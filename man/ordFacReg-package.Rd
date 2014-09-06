@@ -5,7 +5,7 @@
 \concept{ordered predictor}
 \concept{ordered explanatory variable}
 \docType{package}
-\title{Least squares, logistic, and Cox-regression with ordered predictors}
+\title{Least Squares, Logistic, and Cox-Regression with Ordered Predictors}
 \description{In biomedical studies, researchers are often interested in assessing the association between one or more
 ordinal explanatory variables and an outcome variable, at the same time adjusting for covariates of any type.
 The outcome variable may be continuous, binary, or represent censored survival times. In the absence of a precise

@@ -1,3 +1,7 @@
+OrdFacReg_1.0.5 (2014/09/06)
+---------------------------------
+- Added dependency on package 'survival'
+
 OrdFacReg_1.0.4 (2014/02/06)
 ---------------------------------
 - Updated NAMESPACE
@@ -11,11 +15,9 @@ OrdFacReg_1.0.2 (2010/08/30)
 ---------------------------------
 - added option to chose ordering of each ordered factor
 
-
 OrdFacReg_1.0.1 (2009/09/15)
 ---------------------------------
 - added option to chose ordering of each ordered factor
-
 
 OrdFacReg_1.0.0 (2009/04/16)
 ---------------------------------
