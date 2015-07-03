@@ -1,3 +1,7 @@
+OrdFacReg_1.0.6 (2015/07/03)
+---------------------------------
+- Properly import globals.
+
 OrdFacReg_1.0.5 (2014/09/06)
 ---------------------------------
 - Added dependency on package 'survival'

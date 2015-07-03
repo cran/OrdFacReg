@@ -1,6 +1,6 @@
 logRegSubspace <- function(D, Y, A, JJs, q){
 
-mle <- matrix(glm.fit(Y, D, family = binomial(link = logit))$coefficients, ncol = 1)
+mle <- matrix(glm.fit(Y, D, family = binomial(link = "logit"))$coefficients, ncol = 1)
 
 ## in case of no violations of constraints just compute
 ## unconstrained estimates
@@ -25,7 +25,7 @@ rems <- res$rems
 JJs.A <- res$JJs.A
 
 ## compute unconstrained estimator on subspace
-beta.col <- matrix(glm.fit(Y.col, D, family = binomial(link = logit))$coefficients, ncol = 1)
+beta.col <- matrix(glm.fit(Y.col, D, family = binomial(link = "logit"))$coefficients, ncol = 1)
 
 ## expand estimate to receive estimate in original dimension back
 beta <- expandBeta(beta.col, sums, JJs.A)$beta

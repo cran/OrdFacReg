@@ -22,9 +22,12 @@ setminus,
 shrinkBeta
        )
 
-importFrom(MASS,
-           ginv)
-importFrom(eha,
-           coxreg.fit) 
-importFrom(survival,
-           Surv)  
+importFrom(stats, glm.fit, binomial)
+importFrom(MASS, ginv)
+importFrom(eha, coxreg.fit) 
+importFrom(survival, Surv)  
+
+
+
+
+
