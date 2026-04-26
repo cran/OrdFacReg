@@ -31,7 +31,7 @@ An active set algorithm as described in Duembgen et al. (2007) is used.
 \references{
 Duembgen, L., Huesler, A. and Rufibach, K. (2010).
 Active set and EM algorithms for log-concave densities based on complete and censored data.
-Technical report 61, IMSV, Univ. of Bern, available at \url{http://arxiv.org/abs/0707.4643}.
+Technical report 61, IMSV, Univ. of Bern, available at \url{https://arxiv.org/abs/0707.4643}.
 
 Rufibach, K. (2010).
 An Active Set Algorithm to Estimate Parameters in Generalized Linear Models with Ordered Predictors.

@@ -1,6 +1,6 @@
-a519549e55837419616d77897d92a057 *DESCRIPTION
+c0b9444e5765a633759c5fd423010820 *DESCRIPTION
 b0ae50e13d1c8ae91d273fda095ec028 *NAMESPACE
-40b9619a7a3cd0a8478b26b3443a864b *NEWS
+48a0269b3ce6eedd58fcac12775f0bf7 *NEWS
 260a0e9f9d3017bfa4e26469c7406aa0 *R/Abeta.r
 7690d2a3cea8676168ca610c1d45558b *R/LSEsubspace.r
 d6bd3e6781dbb9a7a0167e3c4e472d07 *R/constraintMats.r
@@ -22,8 +22,8 @@ bdf171ba9be3b311d652b4e43e4744e2 *R/phi_jl.r
 950185efe0bd4f4ada7d6c5a2915724d *R/prepareData.r
 82197cd4a05a8d0285da267364c90b19 *R/setminus.r
 a7c7be0d23694d3709b5ace13bb09fde *R/shrinkBeta.r
-b55a3ff8bf4c4395af1941aefda1eca1 *man/internal.Rd
-38c1c7b6ebf2be0f32c50f2eabd3ca04 *man/ordFacReg-package.Rd
-987675e7566ade73c9ed2566f397dc0f *man/ordFacReg.Rd
-2671621c9a833f374aa80b98bbb5da48 *man/ordFacRegCox.Rd
+200a75fd5179b5ac17d2c4aa2d2a6a3e *man/internal.Rd
+e6e2c74bdf62311e7194cc50855132dc *man/ordFacReg-package.Rd
+c9eaef1af9e54632ddb60001152e2d70 *man/ordFacReg.Rd
+be476ccd723d3d2e2724ec97c5d6051c *man/ordFacRegCox.Rd
 b3651c7500381342bd5d2bd5ef065642 *man/prepareData.Rd

@@ -1,3 +1,11 @@
+OrdFacReg_1.0.8 (2026/04/26)
+---------------------------------
+- Fix minor issues in man files, added proper author field do DESCRIPTION.
+
+OrdFacReg_1.0.7 (2025/05/04)
+---------------------------------
+- Fix minor issues in man files.
+
 OrdFacReg_1.0.6 (2015/07/03)
 ---------------------------------
 - Properly import globals.

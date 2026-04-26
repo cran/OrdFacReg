@@ -2,9 +2,10 @@ Package: OrdFacReg
 Type: Package
 Title: Least Squares, Logistic, and Cox-Regression with Ordered
         Predictors
-Version: 1.0.6
-Date: 2015-07-03
-Author: Kaspar Rufibach
+Version: 1.0.8
+Date: 2026-04-26
+Authors@R: 
+    person(given = "Kaspar", family = "Rufibach", role = c("aut", "cre"), email = "kaspar.rufibach@gmail.com", comment = c(ORCID = "0000-0002-2634-1167"))
 Maintainer: Kaspar Rufibach <kaspar.rufibach@gmail.com>
 Depends: survival, eha, MASS
 Imports: stats
@@ -12,7 +13,9 @@ Description: In biomedical studies, researchers are often interested in assessin
 License: GPL (>= 2)
 LazyLoad: yes
 URL: http://www.kasparrufibach.ch
-Packaged: 2015-07-04 12:27:52 UTC; rufibach
 NeedsCompilation: no
+Packaged: 2026-04-26 17:03:16 UTC; kaspa
+Author: Kaspar Rufibach [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-2634-1167>)
 Repository: CRAN
-Date/Publication: 2015-07-04 15:27:12
+Date/Publication: 2026-04-26 17:20:02 UTC
